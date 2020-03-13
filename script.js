@@ -52,7 +52,7 @@ function checkLength(input, min, max) {
 	} else if (input.value.length > max) {
 		showError(
 			input,
-			`${getFieldName(input.id)} must be less than ${min} characters`
+			`${getFieldName(input.id)} must be less than ${max} characters`
 		);
 	}
 }
