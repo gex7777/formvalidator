@@ -45,9 +45,15 @@ function isValidEmail(email) {
 //check length
 function checkLength(input, min, max) {
 	if (input.value.length < min) {
-		showError(input, `${input.id} must be at least ${min} characters`);
+		showError(
+			input,
+			`${getFieldName(input.id)} must be at least ${min} characters`
+		);
 	} else if (input.value.length > max) {
-		showError(input, `${input.id} must be less than ${min} characters`);
+		showError(
+			input,
+			`${getFieldName(input.id)} must be less than ${min} characters`
+		);
 	}
 }
 
