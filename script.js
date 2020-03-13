@@ -30,6 +30,8 @@ function checkRequired(inputArr) {
 
 //return capatilized id
 function getFieldName(input) {
+	console.log(input.charAt(0).toUpperCase() + input.slice(1));
+
 	return input.charAt(0).toUpperCase() + input.slice(1);
 }
 //check valid email
@@ -38,7 +40,7 @@ function isValidEmail(email) {
 	if (re.test(email.value.trim())) {
 		showSuccess(email);
 	} else {
-		showError(email, "email is not valid");
+		showError(email, "Email is not valid");
 	}
 }
 
@@ -60,7 +62,7 @@ function checkLength(input, min, max) {
 //check passwords match
 function checkPasswordMatch(pass1, pass2) {
 	if (pass1.value !== pass2.value) {
-		showError(pass2, "passwords do not match");
+		showError(pass2, "Passwords do not match");
 	}
 }
 //event listeners
